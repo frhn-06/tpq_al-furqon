@@ -19,6 +19,7 @@ const headerFixActive = (header) => {
         navItem.forEach(nav => {
             nav.classList.add('nav-turun'); 
         });
+        document.body.classList.add('x-hidden');
     } else {
         header.classList.remove('header-fix');
         judul.classList.remove('judul-fix');

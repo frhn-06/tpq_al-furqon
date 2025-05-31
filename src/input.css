@@ -16,8 +16,16 @@
     font-family: "Poppins", sans-serif;
 }
 
+html, body {
+    overflow-x: hidden !important;
+}
+
 .anteng {
     @apply overflow-y-hidden;
+}
+
+.x-hidden {
+    @apply overflow-x-hidden;
 }
 
 .tetap {

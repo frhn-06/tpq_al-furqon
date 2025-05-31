@@ -132,7 +132,7 @@ const isiGaleri = (e) => {
     <div class="galeri-item w-full mb-4 md:w-100 md:mx-2 lg:w-90 lg:mx-4 lg:mb-8 relative group    overflow-hidden"
                 data-aos="zoom-in-up"
                 data-aos-duration="1500">
-                    <img src="../img/galeri/${e.src}" alt="${e.nama}" class="w-full">
+                    <img src="./img/galeri/${e.src}" alt="${e.nama}" class="w-full">
                     <div class="operplay-foto absolute top-0 left-0 right-0 bottom-0 bg-white/30 scale-y-0 origin-top group-hover:scale-y-100 transition-all duration-300 ease-in-out">
                   
                     </div>

@@ -372,6 +372,9 @@
   .max-w-60 {
     max-width: calc(var(--spacing) * 60);
   }
+  .max-w-svw {
+    max-width: 100svw;
+  }
   .origin-top {
     transform-origin: top;
   }
@@ -412,6 +415,9 @@
   }
   .overflow-hidden {
     overflow: hidden;
+  }
+  .overflow-x-hidden {
+    overflow-x: hidden;
   }
   .rounded {
     border-radius: 0.25rem;
@@ -1055,8 +1061,14 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+html, body {
+  overflow-x: hidden !important;
+}
 .anteng {
   overflow-y: hidden;
+}
+.x-hidden {
+  overflow-x: hidden;
 }
 .tetap {
   overflow: hidden;

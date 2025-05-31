@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+@theme {
+    --color-sementara: #334150;
+    --color-tulisan-gelap: #334150;
+    --color-tulisan-terang: #E2E8F0;
+    --color-paragraf: #CBD5E1; 
+    --color-opsi: #93C572;
+    --color-opsi-2: #FFC28B;
+    --color-opsi-3: #D1B399;
+    --color-bg: rgba(0,0,0,.9);
+    --color-bg-2: #2a1709;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.anteng {
+    @apply overflow-y-hidden;
+}
+
+.tetap {
+    @apply overflow-hidden;
+}
+
+.font-logo {
+    font-family: 'Lobster';
+}
+
+/* icon wa */
+.a-wa {
+    background: linear-gradient(to top, #075E54 0%, #25D366 100%);
+    @apply transition-all duration-300 ease-in-out;
+}
+
+.a-wa:hover, .a-wa-hover {
+    @apply bg-linear-0 ring-2 ring-[#25D366] transition-all duration-300 ease-in-out;
+}
+
+.panah-bawah {
+    animation: naikturun 2s ease infinite;
+}
+
+@keyframes naikturun {
+    0% {
+        transform: translateY(0);
+    } 50% {
+        transform: translateY(-.8rem);
+    } 100% {
+        transform: translateY(0);
+    }
+}
+
+/* header */
+.header-fix {
+    @apply fixed bg-white/40 backdrop-blur-xs lg:rounded-b-4xl;
+    box-shadow: inset 0px -.5px 1px .5px rgb(23, 23, 23);
+}
+
+.judul-fix {
+    @apply text-white;
+}
+
+.span-1-active {
+    @apply -rotate-45 origin-right translate-y-[2px] -translate-x-[3.5px];
+}
+
+.span-2-active {
+    @apply scale-0;
+}
+
+.span-3-active {
+    @apply rotate-45 origin-right -translate-y-[2px] -translate-x-[3.5px];
+}
+
+.nav-muncul {
+    animation: navmuncul .8s ease-in-out forwards; 
+}
+
+@keyframes navmuncul {
+    0% {
+        max-height: 0;
+    } 100% {
+        max-height: 20rem;
+    }
+}
+
+.nav-tutup {
+    animation: navtutup .5s ease-in-out forwards;
+}
+
+@keyframes navtutup {
+    0% {
+        max-height: 20rem;
+    } 100% {
+        max-height: 0;
+    }
+}
+
+.nav-turun {
+    @apply lg:ring-1 lg:ring-black;
+}
+
+
+
+
+/* hero */
+.slogan-tempel {
+    @apply bg-transparent ring-2 ring-opsi text-tulisan-terang;
+}
+
+.gradasi-gelap {
+    background: linear-gradient(to top, rgb(25, 25, 25) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+/* tentang */
+/* .nav-about-muncul {
+    animation: navaboutmuncul .3s ease-in-out forwards;
+}
+
+@keyframes navaboutmuncul {
+    0% {
+        max-height: 0;
+    } 100% {
+        max-height: 8rem;
+    }
+}
+
+.nav-about-tutup {
+    animation: navabouttutup .3s ease-in-out forwards;
+}
+
+@keyframes navabouttutup {
+    0% {
+        max-height: 8rem;
+    } 100% {
+        max-height: 0;
+    }
+} */
+
+
+/* tentang */
+.visi-misi-buka {
+    animation: bukavisimisi .3s ease-in-out forwards;
+}
+
+@keyframes bukavisimisi {
+    0% {
+        max-height: 0;
+    } 100% {
+        max-height: 20rem;
+    }
+}
+.visi-misi-tutup {
+    animation: tutupvisimisi .3s ease-in-out forwards;
+}
+
+@keyframes tutupvisimisi {
+    0% {
+        max-height: 20rem;
+    } 100% {
+        max-height: 0;
+    }
+}
+
+
+/* galeri */
+.operplay-foto-tempel {
+    @apply scale-y-100;
+}
+
+.judul-foto-tempel {
+    @apply translate-y-0;
+}
+
+.overplay-foto-besar-active {
+    @apply scale-100;
+}
+.overplay-foto-besar-active .foto-besar.active,  .overplay-foto-besar-active .tombol-close {
+    @apply scale-100;
+}
+
+
+
+
+
+/* footer */
+.nav-foot.tempel {
+    @apply text-tulisan-terang bg-bg;
+}
+
+

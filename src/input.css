@@ -8,6 +8,7 @@
     --color-opsi: #93C572;
     --color-opsi-2: #FFC28B;
     --color-opsi-3: #D1B399;
+    --color-opsi-4: rgb(204, 188, 148);
     --color-bg: rgba(0,0,0,.9);
     --color-bg-2: #2a1709;
 }
@@ -20,7 +21,7 @@ html, body {
     overflow-x: hidden !important;
 }
 
-.anteng {
+.y-hidden {
     @apply overflow-y-hidden;
 }
 
@@ -30,6 +31,10 @@ html, body {
 
 .tetap {
     @apply overflow-hidden;
+}
+
+.transisi {
+    @apply scale-96 translate-y-2 shadow-none;
 }
 
 .font-logo {
@@ -199,4 +204,6 @@ html, body {
     @apply text-tulisan-terang bg-bg;
 }
 
-
+.logo-tempel {
+    @apply scale-[.97] translate-y-2 drop-shadow-sm;
+}

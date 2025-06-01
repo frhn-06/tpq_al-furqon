@@ -129,19 +129,21 @@ const getAlumnus = async (file) => {
 
 const isiGaleri = (e) => {
     return `
-    <div class="galeri-item w-full mb-4 md:w-100 md:mx-2 lg:w-90 lg:mx-4 lg:mb-8 relative group    overflow-hidden"
-                data-aos="zoom-in-up"
-                data-aos-duration="1500">
+            <div 
+            data-aos="zoom-in-up"
+            data-aos-duration="1500">
+                <div class="galeri-item w-full mb-4 md:w-100 md:mx-2 lg:w-90 lg:mx-4 lg:mb-8 relative group shadow-2xl shadow-white/10  overflow-hidden transition-all duration-500 hover:shadow-none hover:scale-95 hover:translate-y-2">
                     <img src="./img/galeri/${e.src}" alt="${e.nama}" class="w-full">
                     <div class="operplay-foto absolute top-0 left-0 right-0 bottom-0 bg-white/30 scale-y-0 origin-top group-hover:scale-y-100 transition-all duration-300 ease-in-out">
                   
                     </div>
-                    <div class="judul-foto absolute top-0 right-0 left-0 bottom-0 flex justify-center items-center translate-y-full transition-all delay-100 duration-300 ease-in-out group-hover:translate-y-0">
+                    <div class="judul-foto absolute top-0 right-0 left-0 bottom-0 flex justify-center items-center translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out delay-100">
                         <h4 class="font-light text-3xl text-black" style="font-family: Berkshire Swash, serif;">
                             AL FURQON
                         </h4>
                     </div>
                 </div>
+            </div>
                 `;
 }
 
@@ -191,8 +193,12 @@ const galeriBaru = async () => {
 }
 
 // galeri eksekusi
+const dapatkanArrayGaleri = () => {
+    return Array.from(document.querySelectorAll('.galeri-item'));
+}
+
 const buangEfekOperplay = () => {
-    const galeriItem = Array.from(document.querySelectorAll('.galeri-item'));
+    const galeriItem = dapatkanArrayGaleri();
 
     const itemada = galeriItem.find(leri =>{
         return leri.querySelector('.operplay-foto-tempel')?.classList.remove('operplay-foto-tempel');
@@ -201,7 +207,7 @@ const buangEfekOperplay = () => {
 }
 
 const buangjudul = () => {
-    const galeriItem = Array.from(document.querySelectorAll('.galeri-item'));
+    const galeriItem = dapatkanArrayGaleri();
 
     const itemada = galeriItem.find(leri =>{
         return leri.querySelector('.judul-foto-tempel')?.classList.remove('judul-foto-tempel');
@@ -209,18 +215,30 @@ const buangjudul = () => {
     return itemada
 }
 
+const buangTransisi = () => {
+    const galeriItem = dapatkanArrayGaleri();
+    
+    const itemada = galeriItem.find(leri =>{
+        return leri.classList.remove('transisi');
+    });
+    return itemada;
+}
+
 const buangEfek = () => {
     buangEfekOperplay()
     buangjudul();
+    buangTransisi();
 }
 
 const tambahEfek = (item) => {
     const operplay = item.querySelector('.operplay-foto');
     const judul = item.querySelector('.judul-foto');
 
+    item.classList.add('transisi');
     operplay.classList.add('operplay-foto-tempel');
     judul.classList.add('judul-foto-tempel');
 } 
+
 
 const bukaFotoBesar = (src) => {
     const operplay = document.querySelector('.overplay-foto-besar')
@@ -248,11 +266,11 @@ const tutupFotoBesar = (x) => {
 
 
 const layarAnteng = () => {
-    document.body.classList.add('anteng');
+    document.body.classList.add('y-hidden');
 }
 
 const layarOraAnteng = () => {
-    document.body.classList.remove('anteng');
+    document.body.classList.remove('y-hidden');
 }
 
 
@@ -340,7 +358,13 @@ navFoot.addEventListener('touchend', () => {
     navFoot.classList.remove('tempel') 
 });
 
-
+const logfoot = document.querySelector('.logo-foot');
+logfoot.addEventListener('touchstart', () => {
+    logfoot.classList.add('logo-tempel');
+});
+logfoot.addEventListener('touchend', () => {
+    logfoot.classList.remove('logo-tempel');
+});
 
 
 

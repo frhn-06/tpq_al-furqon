@@ -12,6 +12,10 @@
         "src": "foto-3.jpg"
     },
     {
+        "nama": "foto-4",
+        "src": "foto-4.jpg"
+    },
+    {
         "nama": "foto-5",
         "src": "foto-5.jpg"
     },
@@ -62,5 +66,21 @@
     {
         "nama": "foto-17",
         "src": "foto-17.jpg"
+    },
+    {
+        "nama": "foto-18",
+        "src": "foto-18.jpg"
+    },
+    {
+        "nama": "foto-19",
+        "src": "foto-19.jpg"
+    },
+    {
+        "nama": "foto-20",
+        "src": "foto-20.jpg"
+    },
+    {
+        "nama": "foto-21",
+        "src": "foto-21.jpg"
     }
 ]
